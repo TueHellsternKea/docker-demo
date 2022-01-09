@@ -40,7 +40,7 @@ print(df.head(1000))
 ## Creating a Docker Image file which will be used to make a Container
 
 1. Install Docker by going to there website and following the installation steps - https://docs.docker.com/engine/install/
-2. Make a new file in your **docker-demo1** directory and name it **Dockerfile**. *Be sure to **not** give it an extension.*
+2. Make a new file in your **docker-demo1** directory and name it **Dockerfile**. *Be sure **not** give it an extension.*
 3. Write this code in the file:
 
 ```
