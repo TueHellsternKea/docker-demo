@@ -12,7 +12,7 @@ You are going to use:
 In the development of a applications you need a consistent environment across all your devices.
 It can be time consuming to install all the dependencies from scratch whenever you try to run your code on a new device or in a new environment.
 
-**Docker is here to solve exactly this problem.**
+> **Docker is here to solve exactly this problem.**
 
 Docker provides a way to package everything you need to run your applications in a Container which you can download or pull into all the devices you use and just start working right away.
 
