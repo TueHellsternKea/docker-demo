@@ -92,7 +92,7 @@ Now you will see the Pandas dataframe on the screen.
 ```
 docker build --tag docker-demo1 .
 ```
-**before** you can run 
+**before** you run 
 
 ```
 docker run docker-demo1
