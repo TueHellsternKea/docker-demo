@@ -1,4 +1,4 @@
-# Using a Docker, Python and Pandas
+# Using Docker, Python and Pandas
 Using a Docker container to run a python application using Pandas library to import the **customers.csv** file. 
 
 ![customeres_csv](customers_csv.jpg)
