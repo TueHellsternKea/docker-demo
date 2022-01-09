@@ -38,7 +38,7 @@ pip3 install pandas
 ```
 import pandas as pd
 df = pd.read_csv('SampleCSVFile.csc')
-print(df.head(1000))
+print(df.head(10))
 ```
     
 6. Run the Python file to make sure that everything is working
