@@ -1,4 +1,5 @@
 # Using Docker, Python and Pandas
+@octocat :+1: This PR looks great - it's ready to merge! :shipit:
 Using a Docker container to run a Python application using Pandas library to import the **customers.csv** file. 
 
 ![customeres_csv](customers_csv.jpg)
@@ -37,7 +38,7 @@ pip3 install pandas
 
 ```
 import pandas as pd
-df = pd.read_csv('SampleCSVFile.csc')
+df = pd.read_csv('customers.csv')
 print(df.head(10))
 ```
     
