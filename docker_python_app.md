@@ -77,7 +77,7 @@ docker run docker-demo1
 
 Now you will see the Pandas dataframe printed on your screen.
 
-![](./docker_run.jpg)
+![docker_run](docker_run.jpg)
 
 **Rember** - If you make any changes to you have to run
 
