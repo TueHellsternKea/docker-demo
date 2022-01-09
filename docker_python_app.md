@@ -65,6 +65,8 @@ CMD [ "python", "demo1_app.py"]
 docker build --tag docker-demo1 .
 ```
 
+![docker_build](docker_build.jpg)
+
 *Make sure that Docker demon is running*
 
 # Testing the container
