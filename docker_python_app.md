@@ -25,7 +25,7 @@ There are 3 steps in this demo:
 1. Install Python if its on on your system
 2. Install Pandas using
     pip3 install pandas
-3. Create a project directory and call it **python-docker-demo1**
+3. Create a project directory and call it **docker-demo1**
 4. In the **python-docker-demo1** folder, make a new python file and give a name **demo1_app.py**
 5. Write this code in the **demo1_app.py** file
 
@@ -40,7 +40,7 @@ print(df.head(1000))
 ## Creating a Docker Image file which will be used to make a Container
 
 1. Install Docker by going to there website and following the installation steps - https://docs.docker.com/engine/install/
-2. Make a new file in your **python-docker-demo1** directory and name it **Dockerfile**. *Be sure to not give it an extension.*
+2. Make a new file in your **docker-demo1** directory and name it **Dockerfile**. *Be sure to **not** give it an extension.*
 3. Write this code in the file:
 
 ```
@@ -49,7 +49,7 @@ FROM python:3.8-slim-buster
 RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN pip install pandas
 COPY . .
-CMD [ "python", "demo app.py"]
+CMD [ "python", "demo1_app.py"]
 ```
 
 - **First line** tells the docker engine on how to read/parse the lines coming after it. This line always has to be the first line before any spaces or characters.
@@ -62,15 +62,30 @@ CMD [ "python", "demo app.py"]
 4. Open to your **commandpromt** and make a docker image by typing:
 
 ```
-docker build --tag python-docker .
+docker build --tag docker-demo1 .
 ```
+
+*Make sure that Docker demon is running at your computer*
 
 # Testing the container
 
 1. Run the docker image by typing, in your commandpromt:
 
 ```
-Docker run python-docker
+docker run docker-demo1
 ```
 
-Now you will see the Pandas dataframe printed on your screen
+Now you will see the Pandas dataframe printed on your screen.
+
+![docker_run](docker_run.jpg)
+
+**Rember** - If you make any changes to you have to run
+
+```
+docker build --tag docker-demo1 .
+```
+before you can run 
+
+```
+docker run docker-demo1
+```
