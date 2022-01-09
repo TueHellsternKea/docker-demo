@@ -16,6 +16,14 @@ It can be time consuming to install all the dependencies from scratch whenever y
 
 Docker provides a way to package everything you need to run your applications in a Container which you can download or pull into all the devices you use and just start working right away.
 
+## Files
+The files for this demo i located in the folder **docker-demo1**
+
+- customers.csv
+- demo1_app.py
+- Dockerfile
+
+## Steps
 There are 3 steps in this demo:
 
 1. Installing Python and Pandas onto our system and making the Python application
