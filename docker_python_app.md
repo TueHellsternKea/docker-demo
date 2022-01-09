@@ -1,5 +1,5 @@
 # Using Docker, Python and Pandas
-Using a Docker container to run a python application using Pandas library to import the **customers.csv** file. 
+Using a Docker container to run a Python application using Pandas library to import the **customers.csv** file. 
 
 ![customeres_csv](customers_csv.jpg)
 
@@ -26,7 +26,11 @@ There are 3 steps in this demo:
 
 1. Install Python if its on on your system
 2. Install Pandas using
-    pip3 install pandas
+
+```
+pip3 install pandas
+```
+
 3. Create a project directory and call it **docker-demo1**
 4. In the **python-docker-demo1** folder, make a new python file and give a name **demo1_app.py**
 5. Write this code in the **demo1_app.py** file
@@ -54,12 +58,12 @@ COPY . .
 CMD [ "python", "demo1_app.py"]
 ```
 
-- **First line** tells the docker engine on how to read/parse the lines coming after it. This line always has to be the first line before any spaces or characters.
-- **Second line** downloads a base python image from Dockerhub. It is an environment that already has python installed on it.
-- **Third line** upgrades the Pip as the above image is running an old version of it.
+- **First line** tells the docker engine on how to read/parse the lines coming after it. This line always has to be the first line before any spaces or characters
+- **Second line** downloads a base python image from Dockerhub. It is an environment that already has python installed on it
+- **Third line** upgrades the Pip as the above image is running an old version of it
 - **Fourth line** installs Pandas library in the image. This is a crucial step that we will also use to test our Docker image next
-- **Fifth line** copies all the files in the current directory and stores them onto the file system attached with the docker image.
-- **Sixth line** tells Docker image on what to do when the Run command is given.
+- **Fifth line** copies all the files in the current directory and stores them onto the file system attached with the docker image
+- **Sixth line** tells Docker image on what to do when the Run command is given
 
 4. Open to your **commandpromt** and make a docker image by typing:
 
@@ -79,16 +83,16 @@ docker build --tag docker-demo1 .
 docker run docker-demo1
 ```
 
-Now you will see the Pandas dataframe printed on your screen.
+Now you will see the Pandas dataframe on the screen.
 
 ![docker_run](docker_run.jpg)
 
-**Rember** - If you make any changes to you have to run
+**Rember** - If you make any changes you have to run
 
 ```
 docker build --tag docker-demo1 .
 ```
-before you can run 
+**before** you can run 
 
 ```
 docker run docker-demo1
