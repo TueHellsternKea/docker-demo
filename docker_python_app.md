@@ -61,12 +61,16 @@ CMD [ "python", "demo app.py"]
 
 4. Open to your **commandpromt** and make a docker image by typing:
 
-    docker build --tag python-docker .
-
+```
+docker build --tag python-docker .
+```
 
 # Testing the container
+
 1. Run the docker image by typing, in your commandpromt:
 
-    Docker run python-docker
-    
+```
+Docker run python-docker
+```
+
 Now you will see the Pandas dataframe printed on your screen
