@@ -41,12 +41,12 @@ There are 3 steps in this demo:
 2. Make a new file in your **python-docker-demo1** directory and name it **Dockerfile**. *Be sure to not give it an extension.*
 3. Write this code in the file:
 
-  # syntax=docker/dockerfile:1
-  FROM python:3.8-slim-buster
-  RUN /usr/local/bin/python -m pip install --upgrade pip
-  RUN pip install pandas
-  COPY . .
-  CMD [ "python", "demo app.py"]
+      # syntax=docker/dockerfile:1
+      FROM python:3.8-slim-buster
+      RUN /usr/local/bin/python -m pip install --upgrade pip
+      RUN pip install pandas
+      COPY . .
+      CMD [ "python", "demo app.py"]
 
 - **First line** tells the docker engine on how to read/parse the lines coming after it. This line always has to be the first line before any spaces or characters.
 - **Second line** downloads a base python image from Dockerhub. It is an environment that already has python installed on it.
@@ -61,7 +61,6 @@ There are 3 steps in this demo:
 
 
 # Testing the container
-
 1. Run the docker image by typing, in your commandpromt:
 
     Docker run python-docker
