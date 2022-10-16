@@ -40,7 +40,7 @@ pip3 install pandas
 ```
 
 3. Create a project directory and call it **docker-demo-pandas**
-4. In the **python-docker-demo1** folder, make a new python file and give a name **demo_pandas__app.py**
+4. In the **python-docker-demo** folder, make a new python file and give a name **demo_pandas__app.py**
 5. Write this code in the **demo_pandas__app.py** file
 
 ```
