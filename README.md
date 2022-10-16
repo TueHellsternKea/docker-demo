@@ -39,9 +39,10 @@ There are 3 steps in this demo:
 pip3 install pandas
 ```
 
-3. Create a project directory and call it **docker-demo-pandas**
-4. In the **python-docker-demo** folder, make a new python file and give a name **demo_pandas__app.py**
-5. Write this code in the **demo_pandas__app.py** file
+3. Create a project directory **docker_demo_pandas**
+4. Copy the file **customers.csv** to this directory
+5. In this folder, make a new python file - **demo_pandas_app.py**
+6. Write this code in the **demo_pandas_app.py** file
 
 ```
 import pandas as pd
@@ -52,10 +53,9 @@ print(df.head(10))
 6. Run the Python file to make sure that everything is working
 
 ## Creating a Docker Image file which will be used to make a Container
-
-1. Install Docker by going to there website and following the installation steps - https://docs.docker.com/engine/install/
-2. Make a new file in your **docker-demo1** directory and name it **Dockerfile**. *Be sure **not** give it an extension.*
-3. Write this code in the file:
+1. Install Docker, *if its NOT on your system*, by going to there website and following the installation steps - https://docs.docker.com/engine/install/
+2. Make a new file in your **docker_demo_pandas** directory and name it **Dockerfile**. *Be sure **not** give it an extension.*
+3. Write this code in - **Dockerfile**:
 
 ```
 # syntax=docker/dockerfile:1
@@ -63,7 +63,7 @@ FROM python:3.8-slim-buster
 RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN pip install pandas
 COPY . .
-CMD [ "python", "demo_pandas__app.py"]
+CMD [ "python", "demo_pandas_app.py"]
 ```
 
 - **First line** tells the docker engine on how to read/parse the lines coming after it. This line always has to be the first line before any spaces or characters
@@ -84,11 +84,10 @@ docker build --tag docker-demo1 .
 *Make sure that Docker demon is running*
 
 # Testing the container
-
 1. Run the docker image by typing, in your commandpromt:
 
 ```
-docker run docker-demo1
+docker run docker_demo_pandas
 ```
 
 Now you will see the Pandas dataframe on the screen.
@@ -98,11 +97,10 @@ Now you will see the Pandas dataframe on the screen.
 **Rember** - If you make any changes you have to run
 
 ```
-docker build --tag demo_pandas__app.py .
+docker build --tag demo_pandas_app.py .
 ```
 **before** you run 
 
 ```
-docker run demo_pandas__app
+docker run demo_pandas_app
 ```
-
