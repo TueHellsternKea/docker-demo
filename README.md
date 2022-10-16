@@ -17,7 +17,7 @@ It can be time consuming to install all the dependencies from scratch whenever y
 Docker provides a way to package everything you need to run your applications in a Container which you can download or pull into all the devices you use and just start working right away.
 
 ## Files
-The files for this demo i located in the folder **docker-demo1**
+The files for this demo i located in the folder **docker-demo-panda**
 
 - customers.csv
 - demo1_app.py
@@ -32,16 +32,16 @@ There are 3 steps in this demo:
 
 ## Installing Python and Pandas onto our system and making the Python application
 
-1. Install Python if its on on your system
-2. Install Pandas using
+1. Install Python, *if its NOT on on your system*
+2. Install Pandas, *if its NOT on on your system*
 
 ```
 pip3 install pandas
 ```
 
-3. Create a project directory and call it **docker-demo1**
-4. In the **python-docker-demo1** folder, make a new python file and give a name **demo1_app.py**
-5. Write this code in the **demo1_app.py** file
+3. Create a project directory and call it **docker-demo-pandas**
+4. In the **python-docker-demo1** folder, make a new python file and give a name **demo_pandas__app.py**
+5. Write this code in the **demo_pandas__app.py** file
 
 ```
 import pandas as pd
@@ -63,7 +63,7 @@ FROM python:3.8-slim-buster
 RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN pip install pandas
 COPY . .
-CMD [ "python", "demo1_app.py"]
+CMD [ "python", "demo_pandas__app.py"]
 ```
 
 - **First line** tells the docker engine on how to read/parse the lines coming after it. This line always has to be the first line before any spaces or characters
@@ -98,11 +98,11 @@ Now you will see the Pandas dataframe on the screen.
 **Rember** - If you make any changes you have to run
 
 ```
-docker build --tag docker-demo1 .
+docker build --tag demo_pandas__app.py .
 ```
 **before** you run 
 
 ```
-docker run docker-demo1
+docker run demo_pandas__app
 ```
 
