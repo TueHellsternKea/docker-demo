@@ -5,9 +5,9 @@ Using a Docker container to run a Python application using Pandas library to imp
 
 You are going to use:
 
-- Docker
-- Python
-- Pandas
+- **Docker**
+- **Python**
+- **Pandas**
 
 In the development of a applications you need a consistent environment across all your devices.
 It can be time consuming to install all the dependencies from scratch whenever you try to run your code on a new device or in a new environment.
